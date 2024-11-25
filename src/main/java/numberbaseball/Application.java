@@ -24,7 +24,7 @@ public class Application {
 
         int strike=0;
         boolean isCorrect=false;
-        while (isCorrect==false) {
+        while (!isCorrect) {
             // 사용자 입력 받기 (이 부분은 완성되어 있음)
             System.out.print("첫 번째 숫자를 입력하세요: ");
             int user1 = scanner.nextInt();
