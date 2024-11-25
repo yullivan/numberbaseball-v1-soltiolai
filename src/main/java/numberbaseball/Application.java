@@ -24,8 +24,10 @@ public class Application {
 
 
         boolean isCorrect=false;
+
         while (!isCorrect) {
             int strike=0;
+            int ball=0;
             // 사용자 입력 받기 (이 부분은 완성되어 있음)
             System.out.print("첫 번째 숫자를 입력하세요: ");
             int user1 = scanner.nextInt();
@@ -34,7 +36,7 @@ public class Application {
             System.out.print("세 번째 숫자를 입력하세요: ");
             int user3 = scanner.nextInt();
 
-            // TODO: strike 개수를 계산하세요
+            // TODO: strike와 ball 개수를 계산하세요
             if(user1==answer1){
                 strike++;
             }
@@ -45,7 +47,18 @@ public class Application {
                 strike++;
             }
 
+            if(user1==answer2 || user1==answer3){
+                ball++;
+            }
+            if(user2==answer1 || user2==answer3){
+                ball++;
+            }
+            if(user3==answer1 || user3==answer2){
+                ball++;
+            }
+
             // TODO: 결과를 출력하세요 (예: "1 스트라이크")
+            System.out.println(ball+" 볼");
             System.out.println(strike+" 스트라이크");
 
             // TODO: 3 스트라이크인 경우 게임을 끝내세요
